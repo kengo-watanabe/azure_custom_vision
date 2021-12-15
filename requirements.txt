@@ -1,2 +1,4 @@
 streamlit
 Pillow
+azure.cognitiveservices.vision.computervision
+azure.cognitiveservices.vision.computervision.models
