@@ -37,8 +37,8 @@ if uploaded_file is not None:
     for object in detect_objects_results_local.objects:
         draw.rectangle([(object.rectangle.x, object.rectangle.y + object.rectangle.h),(object.rectangle.x + object.rectangle.w,object.rectangle.y)], fill=None, outline=config.rectcolor, width=config.linewidth)
         txpos = (object.rectangle.x, object.rectangle.y-config.textsize-config.linewidth//2)
-        txw,txh = draw.textsize(object.object_property, font=config.font)
+        txw,txh = draw.textsize(object.object_property)
         draw.rectangle([txpos, (object.rectangle.x+txw, object.rectangle.y)], outline=config.rectcolor, fill=config.rectcolor, width=config.linewidth)
-        draw.text((object.rectangle.x, (object.rectangle.y)-14-4//2),object.object_property, font=config.font, fill=config.textcolor)
+        draw.text((object.rectangle.x, (object.rectangle.y)-14-4//2),object.object_property, fill=config.textcolor)
     
     st.image(img,caption='Uploaded Image.', use_column_width=True)
